@@ -1,7 +1,6 @@
-/* body {
+body {  
+  background:#0a5b90;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 100vh;
   flex-direction: column;
-} */
+  gap: 10px;
+}

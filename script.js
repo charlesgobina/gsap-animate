@@ -110,6 +110,21 @@
 
 
 const timeContainer = document.querySelector(".digital-time-container");
+const theButton = document.querySelector(".the-button");
+
+
+theButton.addEventListener("click", function() {
+  gsap.to(theButton, {
+    duration: 1,
+    width: 200,
+    height: 200,
+    textAlign: "center",
+    y:10,
+    yoyo: true,
+    ease: "power2"
+  });
+})
+
 
 function updateClock() {
   const d = new Date();
@@ -129,13 +144,11 @@ function updateClock() {
   gsap.to("#second-hand", { rotation: secondRotation, duration: 1, ease: "linear" });
   gsap.to("#minute-hand", { rotation: minuteRotation, duration: 1, ease: "linear" });
   gsap.to("#hour-hand", { rotation: hourRotation, duration: 1, ease: "linear" });
-  gsap.to(".clock-wrapper", {
-    y: 20,
-    duration: 1,
-    ease: "bounce",
-    repeat: -1,
-    repeatDelay: seconds
-  });
+  // gsap.to(".clock-wrapper", {
+  //   duration: 30,
+  //   borderRadius: "1%",
+  //   repeat: 2,
+  // });
 }
 
 // Update clock every second

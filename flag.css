@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > .flag-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100px;
+  position: relative;
+}
+
+main > .flag-wrapper > #upper, #lower {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.red, .green {
+  width: 0.9rem;
+  height: 0.1em;
+  background-color: black;
+}
+
+.red:nth-child(even) {
+  position: absolute;
+  top: 40%;
+}

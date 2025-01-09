@@ -1,63 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Timeline</title>
-    <link rel="stylesheet" href="kali.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="kali.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
 
+    
+  </style>
 </head>
 <body>
-  <!-- <img class="big" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/fred.svg" alt="" width="150">
-  <img class="small" style="color: pink;" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/fred.svg" alt="" width="100"> -->
-  <header>
-    <div class="digital-time-container">
-      time
-    </div>
+  <div class="card">
     <button class="the-button">
-      click
       <span id="close">
         <i class='bx bx-md bxs-x-circle' style='color:#d33131'  ></i>
       </span>
     </button>
-  </header>
-  <main>
-    <div class="clock-wrapper">
-      <span id="learn">Learn Linux in 2025</span>
-      
-      <span id="cd">cd</span>
-      <span id="mv">mv</span>
-      <span id="cp">cp</span>
-      <span id="second-hand">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" width="20px" alt="tuxy">
-      </span>
-      <span id="minute-hand">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-        </svg> -->
-      </span>
-      <span id="hour-hand">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-        </svg>         -->
-      </span>
+    <div class="title">Essential Linux Commands</div>
+    <div class="command-container">
+      <div class="command" id="commandText"></div>
+      <div class="description" id="descriptionText"></div>
     </div>
-  </main>
-  
-
-
-
-
-
-
-
-
-
-
-
+    <div class="navigation">
+      <button onclick="previousCommand()">Previous</button>
+      <span class="counter" id="counter"></span>
+      <button onclick="nextCommand()">Next</button>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="kali.js"></script>
 </body>
 </html>
+
+

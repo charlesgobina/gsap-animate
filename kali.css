@@ -9,46 +9,99 @@
 
 body {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f0f0f0;
 }
 
-header {
-  display: flex;
-  padding-top: 2rem;
-  flex-direction: column;
-  gap: 1rem;
+.card {
+  width: 380px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: white;
   position: relative;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  z-index: 1;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.command-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.command {
+  font-family: monospace;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #ffd700;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.card .the-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button {
-  top: 40%;
-  position: absolute;
-  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
   border: none;
-  border-radius: 0.25rem;
-  background-color: #fff; /* Bright Red */
-  font-weight: 700;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
 }
 
-.the-button span {
-  position: absolute;
-  display: none;
-  top: 1%;
-  left: 90%;
-  transform: translateX(0);
-  transition: transform 0.3s;
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+.counter {
+  font-size: 14px;
+  opacity: 0.8;
 }
